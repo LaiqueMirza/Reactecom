@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/Reactecom.git/static/css/main.0e546456.chunk.css",
+    "main.js": "/Reactecom.git/static/js/main.3908d5d6.chunk.js",
+    "main.js.map": "/Reactecom.git/static/js/main.3908d5d6.chunk.js.map",
+    "runtime-main.js": "/Reactecom.git/static/js/runtime-main.6f18caa2.js",
+    "runtime-main.js.map": "/Reactecom.git/static/js/runtime-main.6f18caa2.js.map",
+    "static/js/2.24b7fc59.chunk.js": "/Reactecom.git/static/js/2.24b7fc59.chunk.js",
+    "static/js/2.24b7fc59.chunk.js.map": "/Reactecom.git/static/js/2.24b7fc59.chunk.js.map",
+    "static/js/3.657d3f39.chunk.js": "/Reactecom.git/static/js/3.657d3f39.chunk.js",
+    "static/js/3.657d3f39.chunk.js.map": "/Reactecom.git/static/js/3.657d3f39.chunk.js.map",
+    "index.html": "/Reactecom.git/index.html",
+    "static/css/main.0e546456.chunk.css.map": "/Reactecom.git/static/css/main.0e546456.chunk.css.map",
+    "static/js/2.24b7fc59.chunk.js.LICENSE.txt": "/Reactecom.git/static/js/2.24b7fc59.chunk.js.LICENSE.txt",
+    "static/media/cartLogo.50e0aa38.svg": "/Reactecom.git/static/media/cartLogo.50e0aa38.svg",
+    "static/media/circle.db6cb91a.svg": "/Reactecom.git/static/media/circle.db6cb91a.svg",
+    "static/media/logoNav.8df5e5d1.svg": "/Reactecom.git/static/media/logoNav.8df5e5d1.svg",
+    "static/media/rectangle.c6f038c6.svg": "/Reactecom.git/static/media/rectangle.c6f038c6.svg",
+    "static/media/triangle.53144360.svg": "/Reactecom.git/static/media/triangle.53144360.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6f18caa2.js",
+    "static/js/2.24b7fc59.chunk.js",
+    "static/css/main.0e546456.chunk.css",
+    "static/js/main.3908d5d6.chunk.js"
+  ]
+}
