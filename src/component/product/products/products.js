@@ -44,6 +44,12 @@ const Products = ({data}) => {
         <h4 className="h4-clothing">{data.name}</h4>
         <h5 className="brand-clothing">{data.brand}</h5>
         <h5 className="price-clothing">Rs {data.price}</h5>
+        <h5 className="price-clothing">Rs {data.price}</h5>
+        <h5 className="price-clothing">Rs {data.price}</h5>
+        <h5 className="brand-clothing">{data.brand}</h5>
+        <h5 className="price-clothing">Rs {data.price}</h5>
+        <h5 className="price-clothing">Rs {data.price}</h5>
+        <h5 className="price-clothing">Rs {data.price}</h5>
         </div>
       </Link>
     </div> );
