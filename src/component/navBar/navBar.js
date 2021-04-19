@@ -1,11 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./navBar.css";
 import logoNav from "../../img/logoNav.svg";
 import cartLogo from "../../img/cartLogo.svg";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux';
+import { incrementCart } from '../redux/action';
+import SearchBar from "../searchBar/searchBar";
 
 const NavBar = () => {
+
+  const counter = useSelector(state => state.cartCount);
+  const dispatch = useDispatch();
+  console.log(counter)
   const [clickCheck, setClickCheck] = useState(false);
+
+  useEffect(() => {
+    if(!localStorage.getItem("countOfCart")){
+        let countOfCart = 0
+        countOfCart = JSON.stringify(countOfCart)
+        localStorage.setItem("countOfCart", countOfCart)
+          } else {
+            let countOfCart = JSON.parse(localStorage.getItem("countOfCart"));
+            dispatch(incrementCart(countOfCart))
+          }
+},[])
 
   const hamburgerClicked = () => {
     let element = document.querySelector("#navBarHamburgerDisplay");
@@ -21,8 +39,11 @@ const NavBar = () => {
     <div className="navBar">
       <nav className="navBarNav">
         <div className="navBarDiv">
-          <div className="navBarImgDiv">
+          <div className="navBarImgDiv navBarItems">
             <img className="navBarImg" src={logoNav} alt="nav-logo" />
+          </div>
+          <div className="searchBarDiv">
+            <SearchBar />
           </div>
           <div className="navBarTextDiv">
             <span className="navBarItems ">
@@ -51,13 +72,21 @@ const NavBar = () => {
             </span>
             <span className="navBarItems ">
               <Link
+                to="/logIn"
+                style={{ textDecoration: "none", color: "whitesmoke" }}
+              >
+                LogIn
+              </Link>
+            </span>
+            {/* <span className="navBarItems ">
+              <Link
                 to="/contact"
                 style={{ textDecoration: "none", color: "whitesmoke" }}
               >
                 Contact
               </Link>
-            </span>
-
+            </span> */}
+            
             <Link
               to="/cart"
               style={{ textDecoration: "none", color: "whitesmoke" }}
@@ -67,7 +96,7 @@ const NavBar = () => {
               </div>
             </Link>
             <div className="navBarCountsDiv">
-              <span className="navBarCounts">0</span>
+              <span className="navBarCounts">{counter}</span>
             </div>
 
             <div
@@ -108,14 +137,17 @@ const NavBar = () => {
             Shop
           </Link>
         </h4>
-        <h4 onClick={() => hamburgerClicked()} className="navBarHamburgerItems">
+        {/* <h4 onClick={() => hamburgerClicked()} className="navBarHamburgerItems">
           <Link
             to="/contact"
             style={{ textDecoration: "none", color: "whitesmoke" }}
           >
             Contact
           </Link>
-        </h4>
+        </h4> */}
+        <div onClick={() => hamburgerClicked()} className="navBarHamburgerItems navBarImgDiv">
+            <img className="navBarImg" src={logoNav} alt="nav-logo" />
+          </div>
       </div>
     </div>
   );

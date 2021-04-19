@@ -10,7 +10,7 @@ const Shop = () => {
    
     axios
       .get("/api/products")
-      .then((res) => setProducts(res.data))
+      .then((res) => setProducts(res.data.result))
       .catch((err) => console.log(err));
         setLoading(false);
        

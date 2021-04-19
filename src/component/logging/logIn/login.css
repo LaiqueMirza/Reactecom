@@ -1,0 +1,38 @@
+
+.sectionLogIn {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 100px auto;
+    border: 1px solid grey;
+    background-color: #fcd5ce;
+    padding: 30px 50px 75px ;
+}
+
+.usernameLogIn, .passwordLogIn{
+    padding: 10px;
+    margin: 15px 0;
+    width: 70%;
+    background-color: #f9dcc4; 
+    border: none;
+
+}
+.usernameLogIn:focus, .passwordLogIn:focus{
+    outline: none;
+}
+.buttonLogIn {
+    padding: 5px;
+    margin: 20px 0;
+    width: 150px;
+    font-size: 18px;
+    border-radius: 20px;
+    background-color: #e8a598;
+    cursor: pointer;
+    border: none;
+}
+.buttonLogIn:hover{
+    background-color: #DAFFCC;
+}
+.buttonLogIn:focus{
+    outline: none;
+}
